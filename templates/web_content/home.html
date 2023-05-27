@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+</head>
+<body>
+
+    {% include 'partials/sidebar.html' %}
+
+    <div class="main-container">
+
+        <div class="side_bar">
+        </div>
+
+
+        <div class="content">
+
+            {% include 'partials/navbar.html' %}
+
+            <div class="categories">
+                <div class="book">
+                    <a href="surf.html">
+                    <img src="img/evangelion.jpg" alt="">
+                    <p>All</p></a>
+                </div>
+                <div class="book">
+                    <img src="img/evangelion.jpg" alt="">
+                    <p>All</p>
+                </div>
+                <div class="book">
+                    <img src="img/evangelion.jpg" alt="">
+                    <p>All</p>
+                </div>
+                <div class="book">
+                    <img src="img/evangelion.jpg" alt="">
+                    <p>All</p>
+                </div>
+                <div class="book">
+                    <img src="img/evangelion.jpg" alt="">
+                    <p>All</p>
+                </div>
+                <div class="book">
+                    <img src="img/evangelion.jpg" alt="">
+                    <p>All</p>
+                </div>
+                <div class="book">
+                    <img src="img/evangelion.jpg" alt="">
+                    <p>All</p>
+                </div>
+                <div class="book">
+                    <img src="img/evangelion.jpg" alt="">
+                    <p>All</p>
+                </div>
+                <div class="book">
+                    <img src="img/evangelion.jpg" alt="">
+                    <p>All</p>
+                </div>
+                <div class="book">
+                    <img src="img/evangelion.jpg" alt="">
+                    <p>All</p>
+                </div>
+                <div class="book">
+                    <img src="img/evangelion.jpg" alt="">
+                    <p>All</p>
+                </div>
+            </div>
+
+            <div class="popular">
+                <div class="header">
+                    <h3>Popular now</h3>
+                    <div class="header_right">
+                        <button>View All</button>
+                        <button><-</button>
+                        <button>-></button>
+                    </div>
+                </div>
+                <div class="books">
+                    <div class="book">
+                        <a href="book.html">
+                        <img src="img/evangelion.jpg" alt="">
+                        <h1>Book Name</h1>
+                        <p>Author name</p>
+                        </a>
+                    </div>
+                    <div class="book">
+                        <img src="img/evangelion.jpg" alt="">
+                        <h1>Book Name</h1>
+                        <p>Author name</p>
+                    </div>
+                    <div class="book">
+                        <img src="img/evangelion.jpg" alt="">
+                        <h1>Book Name</h1>
+                        <p>Author name</p>
+                    </div>
+                    <div class="book">
+                        <img src="img/evangelion.jpg" alt="">
+                        <h1>Book Name</h1>
+                        <p>Author name</p>
+                    </div>
+                    <div class="book">
+                        <img src="img/evangelion.jpg" alt="">
+                        <h1>Book Name</h1>
+                        <p>Author name</p>
+                    </div>
+                    <div class="book">
+                        <img src="img/evangelion.jpg" alt="">
+                        <h1>Book Name</h1>
+                        <p>Author name</p>
+                    </div>
+                    <div class="book">
+                        <img src="img/evangelion.jpg" alt="">
+                        <h1>Book Name</h1>
+                        <p>Author name</p>
+                    </div>
+                    <div class="book">
+                        <img src="img/evangelion.jpg" alt="">
+                        <h1>Book Name</h1>
+                        <p>Author name</p>
+                    </div>
+                    <div class="book">
+                        <img src="img/evangelion.jpg" alt="">
+                        <h1>Book Name</h1>
+                        <p>Author name</p>
+                    </div>
+                    <div class="book">
+                        <img src="img/evangelion.jpg" alt="">
+                        <h1>Book Name</h1>
+                        <p>Author name</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="latest">
+                <div class="img">
+                    <img src="img/black_clover.jpg" alt="">
+                </div>
+                <div class="text">
+                    <h1>Best of 2022</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, 
+                        adipisicing elit. Quae minus officia at 
+                        deserunt modi esse optio molestias ipsum 
+                        eum quasi vitae, quis unde dignissimos cum 
+                        omnis delectus consequuntur? Natus, quasi?
+                    </p>
+                    <button><a>View All</a></button>
+                </div>
+                <div class="categories">
+                    <div  class="items">
+                            <img src="img/about.png" alt="">
+                            <a href="#">
+                            <h1>Best books for kids</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur 
+                                adipisicing elit. Porro cupiditate sequi 
+                                nam aperiam dolores quasi aut recusandae 
+                                adipisci numquam earum.
+                            </p>
+                        </a>
+                    </div>
+                    <div  class="items">
+                            <img src="img/about.png" alt="">
+                            <a href="#">
+                            <h1>Top Fictional Books</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur 
+                                adipisicing elit. Porro cupiditate sequi 
+                                nam aperiam dolores quasi aut recusandae 
+                                adipisci numquam earum.
+                            </p>
+                        </a>
+                    </div>
+                    <div  class="items">
+                            <img src="img/about.png" alt="">
+                            <a href="#">
+                            <h1>Top Comics and manga</h1>
+                            <p>Lorem ipsum dolor sit amet consectetur 
+                                adipisicing elit. Porro cupiditate sequi 
+                                nam aperiam dolores quasi aut recusandae 
+                                adipisci numquam earum.
+                            </p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="person">
+                <div class="text">
+                    <h1>Popular authors</h1>
+                </div>
+                <div class="authors_grid">
+                    <div class="author">
+                        <img src="img/eren.jpg" alt="author_pic">
+                        <h3>Name</h3>
+                    </div>
+                    <div class="author">
+                        <img src="img/eren.jpg" alt="author_pic">
+                        <h3>Name</h3>
+                    </div>
+                    <div class="author">
+                        <img src="img/eren.jpg" alt="author_pic">
+                        <h3>Name</h3>
+                    </div>
+                    <div class="author">
+                        <img src="img/eren.jpg" alt="author_pic">
+                        <h3>Name</h3>
+                    </div>
+                    <div class="author">
+                        <img src="img/eren.jpg" alt="author_pic">
+                        <h3>Name</h3>
+                    </div>
+                    <div class="author">
+                        <img src="img/eren.jpg" alt="author_pic">
+                        <h3>Name</h3>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>

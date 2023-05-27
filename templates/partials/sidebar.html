@@ -1,0 +1,24 @@
+{% load static %}
+<div class="side_bar1">
+    <div class="logo">
+    {% if request.path == '/profile/' %}
+    <a href="{% url 'authentication:signout' %}"><img src="{% static 'img/Fate_crest.png' %}" title="Logout" alt="logo"></a>
+    {% else %}
+    <a href="{% url 'authentication:signin' %}"><img src="{% static 'img/Fate_crest.png' %}" title="Profile" alt="logo"></a>
+    {% endif %}
+    </div>
+    <div class="nav_icons">
+        <ul>
+            <li><a href="{% url 'web_content:home' %}"><img src="{% static 'img/fate.jpg' %}" title="Home" alt=""></a></li>
+            <li><a href="{% url 'web_content:categories' %}"><img src="{% static 'img/fate.jpg' %}" title="Categories" alt=""></a></li>
+            <li><a href="{% url 'web_content:favorites' %}"><img src="{% static 'img/fate.jpg' %}" title="Favorites" alt=""></a></li>
+            <li><a href="{% url 'web_content:about' %}"><img src="{% static 'img/fate.jpg' %}" title="About" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="subscribe">
+        <div class="sub_bell">
+            <a href="{% url 'web_content:subscriptions' %}"><img src="{% static 'img/Boruto-karma-seal-Cropped.jpg' %}" alt="subscriptions"></a>
+            <p>Subscriptions</p>
+        </div>
+    </div>
+</div>

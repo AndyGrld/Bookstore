@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'signin.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=., initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<body>
+    <div class="main">
+        <form method="POST">
+            {% csrf_token %}
+            <h1>SIGNUP</h1>
+            <input type="text" name="username" placeholder="Username" required><br>
+            <input type="email" name="email" placeholder="Email" required><br>
+            <input type="password" name="pass1" placeholder="Password"><br>
+            <input type="password" name="pass2" placeholder="Re-enter Password"><br>
+            <button type="submit">CONTINUE</button>
+            <h4>Or signup with</h4>
+            <button><img src="{% static 'img/all_might.jpg' %}" alt="">Facebook</button>
+            <button><img src="{% static 'img/all_might.jpg' %}" alt="">Google</button>
+            <h4>Already a member?<a href="{% url 'authentication:signin' %}">Login now</a></h4>
+        </form>
+    </div>
+</body>
+</html>

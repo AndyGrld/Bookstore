@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'signin.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=., initial-scale=1.0">
+    <title>Publish</title>
+</head>
+<body>
+    <div class="main">
+        <form enctype="multipart/form-data" method="POST">
+            {% csrf_token %}
+            <h1>PUBLISH</h1>
+            <h3>Book</h3>
+            <div>
+            <input type="file" name="book" id="book">
+            </div>
+            <h3>Book Cover</h3>
+            <div>
+            <input type="file" name="cover" id="cover">
+            </div>
+            <input type="text" name="title" placeholder="Book Name"><br>
+            <input type="text" name="genre" placeholder="Genre"><br>
+            <textarea name="description" placeholder="Description of book" id="description" cols="26" rows="7"></textarea><br>
+            <button type="submit">PUBLISH</button>
+        </form>
+    </div>
+</body>
+</html>

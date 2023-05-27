@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+</head>
+<body>
+
+    {% include 'partials/sidebar.html' %}
+
+    <div class="main-container">
+
+        <div class="side_bar">
+        </div>
+
+        <div class="content">
+
+            {% include 'partials/navbar.html' %}
+
+            <div class="profile">
+                {% if current_profile.profilePic %}
+                <img src="{{current_profile.profilePic.url}}" alt="profile img">
+                {% else %}
+                <img src="{% static 'img/pointing_finger.png' %}" alt="default profile img">
+                {% endif %}
+                <div class="text">
+                <h2>{{current_profile.user.username|title}}</h2>
+                <h5>Current Subscribers</h5>
+                <h1>{{current_profile.get_number_of_subscribers}}</h1>
+                <div class="buttons">
+                    <a href="{% url 'authentication:profileEdit' %}"><button>Edit Profile</button></a>
+                    <a href="{% url 'authentication:publish' %}"><button>Publish a book</button></a>
+                </div>
+                </div>
+            </div>
+
+
+            <div class="description">
+                <h1>Bio</h1>
+                <p>{{current_profile.bio}}</p>
+            </div>
+
+            <div class="description">
+                <h1>Genre</h1>
+                <p>{{current_profile.genre}}</p>
+            </div>
+
+            
+            <h1 id="alone">Books published - {{current_profile.get_number_of_published_books}}</h1>
+            <div class="pub">
+                {% for book in profile_books %}
+                <div class="art">
+                    <a href="#" title="{{book.title}}"><img src="{{book.cover.url}}" alt="book cover"></a>
+                    <h3>{{book.title|title}}</h3>
+                    <h3>Ratings:<span class="rate">{{book.ratings}}</span></h3>
+                </div>
+                {% empty %}
+                <div class="art">
+                    <h3>None</h3>
+                </div>
+                {% endfor %}
+            </div>
+
+            <hr>
+            <div class="contact">
+                <h4>Contact:<span>+233 454 867 894</span></h4>
+                <h4>Email:<span>{{current_profile.user.email}}</span></h4>
+                <p><h3>Follow on</h3></p>
+                <a href="#"><img src="{% static 'img/facebook.png' %}" alt="facebook"></a>
+                <a href="#"><img src="{% static 'img/youtube.png' %}"  id="yt"alt="youtube"></a>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AuthorName</title>
+</head>
+<body>
+
+    {% include 'partials/sidebar.html' %}
+
+    <div class="main-container">
+
+        <div class="side_bar">
+        </div>
+
+        <div class="content">
+
+            {% include 'partials/navbar.html' %}
+
+            <div class="profile">
+                <img src="{% static 'img/pointing_finger.png' %}" alt="profile img">
+                <div class="text">
+                <h2>Author Name</h2>
+                <h5>Current Subscribers</h5>
+                <h1>324,234</h1>
+                </div>
+            </div>
+
+            <div class="description">
+                <h1>Description</h1>
+                <p>Lorem ipsum dolor, sit amet 
+                    consectetur adipisicing elit. 
+                    Officia voluptas sapiente nihil 
+                    facilis repudiandae. Quas enim 
+                    magnam eum placeat cum!</p>
+            </div>
+
+            
+            <h1 id="alone">Books published - 5</h1>
+            <div class="pub">
+                <div class="art">
+                    <img src="{% static 'img/chainsaw_man.jpg' %}" alt="">
+                    <h3>BookName</h3>
+                    <h3>Ratings:<span class="rate">4.6</span></h3>
+                </div>
+                <div class="art">
+                    <img src="{% static 'img/chainsaw_man.jpg' %}" alt="">
+                    <h3>BookName</h3>
+                    <h3>Ratings:<span class="rate">4.6</span></h3>
+                </div>
+                <div class="art">
+                    <img src="{% static 'img/chainsaw_man.jpg' %}" alt="">
+                    <h3>BookName</h3>
+                    <h3>Ratings:<span class="rate">4.6</span></h3>
+                </div>
+                <div class="art">
+                    <img src="{% static 'img/chainsaw_man.jpg' %}" alt="">
+                    <h3>BookName</h3>
+                    <h3>Ratings:<span class="rate">4.6</span></h3>
+                </div>
+                <div class="art">
+                    <img src="{% static 'img/chainsaw_man.jpg' %}" alt="">
+                    <h3>BookName</h3>
+                    <h3>Ratings:<span class="rate">4.6</span></h3>
+                </div>
+            </div>
+
+            <div class="description">
+                <h1>About</h1>
+                <p>Lorem ipsum dolor, sit amet 
+                    consectetur adipisicing elit. 
+                    Officia voluptas sapiente nihil 
+                    facilis repudiandae. Quas enim 
+                    magnam eum placeat cum!</p>
+            </div>
+            <hr>
+            <div class="contact">
+                <h4>Contact:<span>+233 454 867 894</span></h4>
+                <h4>Email:<span>someone@gmail.com</span></h4>
+                <p><h3>Follow on</h3></p>
+                <a href="#"><img src="{% static 'img/facebook.png' %}" alt="facebook"></a>
+                <a href="#"><img src="{% static 'img/youtube.png' %}"  id="yt"alt="youtube"></a>
+            </div>
+
+
+        </div>
+    </div>
+
+</body>
+</html>

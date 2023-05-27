@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="{% static 'signin.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=., initial-scale=1.0">
+    <title>Edit Profile</title>
+</head>
+<body>
+    <div class="main">
+        <form method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h1>Edit Profile</h1>
+            <h3>Profile picture</h3>
+            <input value="{{current_profile.profilePic}}" type="file" name="profilePic" id="profilePic"><br>
+            <input value="{{current_profile.user.username}}" type="text" name="username" placeholder="Username" id="username"><br>
+            <textarea name="genre" placeholder="What kind books do you write?" id="genre" cols="26" rows="7">{{current_profile.genre}}</textarea><br>
+            <textarea name="bio" placeholder="About yourself" id="bio" cols="26" rows="7">{{current_profile.bio}}</textarea><br>
+            <button type="submit">Make Changes</button>
+        </form>
+    </div>
+</body>
+</html>
