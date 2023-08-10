@@ -2,22 +2,22 @@
 <div class="side_bar1">
     <div class="logo">
     {% if request.path == '/profile/' %}
-    <a href="{% url 'authentication:signout' %}"><img src="{% static 'img/Fate_crest.png' %}" title="Logout" alt="logo"></a>
+    <a href="{% url 'authentication:signout' %}"><img src="{% static 'img/books.png' %}" title="Logout" alt="logo"></a>
     {% else %}
-    <a href="{% url 'authentication:signin' %}"><img src="{% static 'img/Fate_crest.png' %}" title="Profile" alt="logo"></a>
+    <a href="{% url 'authentication:signin' %}"><img src="{% static 'img/books.png' %}" title="Profile" alt="logo"></a>
     {% endif %}
     </div>
     <div class="nav_icons">
         <ul>
-            <li><a href="{% url 'web_content:home' %}"><img src="{% static 'img/fate.jpg' %}" title="Home" alt=""></a></li>
-            <li><a href="{% url 'web_content:categories' %}"><img src="{% static 'img/fate.jpg' %}" title="Categories" alt=""></a></li>
-            <li><a href="{% url 'web_content:favorites' %}"><img src="{% static 'img/fate.jpg' %}" title="Favorites" alt=""></a></li>
-            <li><a href="{% url 'web_content:about' %}"><img src="{% static 'img/fate.jpg' %}" title="About" alt=""></a></li>
+            <li><a href="{% url 'web_content:home' %}"><img title="Home" src="https://www.freeiconspng.com/uploads/home-page-icon-0.png" width="350" alt="home page" /></a></li>
+            <li><a href="{% url 'web_content:categories' %}"><img src="{% static 'img/categories.png' %}" title="Categories" alt=""></a></li>
+            <li><a href="{% url 'web_content:favorites' %}"><img  title="Favorites"src="https://www.freeiconspng.com/uploads/format-png-image-resolution-3580x3402-size-1759-kb-star-png-image-star--6.png" width="350" alt="favourites" /></a></li>
+            <li><a href="{% url 'web_content:about' %}"><img title="About" src="https://www.freeiconspng.com/uploads/about-us-icon-29.png" width="350" alt="About us" /></a></li>
         </ul>
     </div>
     <div class="subscribe">
         <div class="sub_bell">
-            <a href="{% url 'web_content:subscriptions' %}"><img src="{% static 'img/Boruto-karma-seal-Cropped.jpg' %}" alt="subscriptions"></a>
+            <a href="{% url 'web_content:subscriptions' %}"><a href="https://www.freeiconspng.com/img/16616" title="subscriptions"><img src="https://www.freeiconspng.com/uploads/bell-icon-8.png" width="350" alt="subscriptions" title='subscriptions' /></a></a>
             <p>Subscriptions</p>
         </div>
     </div>
