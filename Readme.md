@@ -1,7 +1,7 @@
 # Bookstore
 
 An online bookstore that allows creators to publish their books, gain subscribers and donations from their fans.
-
+![Webpage](./static/img/book_shop.png)
 
 ## Installation
 1. Clone the repository in an empty directory.
