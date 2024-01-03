@@ -4,3 +4,7 @@ venv
 # Database
 *.db
 *.sqlite3
+
+# Byte files
+*/__pycache__
+*/*/__pycache__
